@@ -3,6 +3,18 @@ template: CHANGELOG.tpl.md
 info:
   title: CHANGELOG
   repository_url: https://github.com/sehal-comparative/change-log-test
+
+jira:
+  info:
+    username: Sehal Sein
+    token: tjJoN6cbQaIdRaIyjmS08D3A
+    url: https://sehal-comp.atlassian.net/jira/
+  issue:
+    type_maps:
+      Task: fix
+      Story: feat
+    description_pattern: "<changelog>(.*)</changelog>"
+
 options:
   commits:
     filters:
@@ -14,16 +26,21 @@ options:
   commit_groups:
     title_maps:
       feat: Features
-      fix: Bug Fixes
+      fix: Fixes
       perf: Performance Improvements
       refactor: Code Refactoring
   header:
-    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    # pattern: "^(?:(\\w*)|(?:\\[(.*)\\])?)\\:\\s(.*)$"
+    # pattern_maps:
+    #   - Type
+    #   - JiraIssueID
+    #   - Subject
+    pattern: "^(?:(\\w*)|(?:\\[(.*)\\])?)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
     pattern_maps:
       - Type
+      - JiraIssueID
       - Scope
       - Subject
-      # - JiraIssueID
   notes:
     keywords:
       - BREAKING CHANGE
