@@ -1,6 +1,9 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Fixes
+- **looo:** [DEMO-2] Change Log Test ([#7](https://github.com/sehal-comparative/change-log-test/issues/7))
+
 
 <a name="v0.0.6"></a>
 ## [v0.0.6] - 2022-07-13
