@@ -19,8 +19,6 @@
 ### {{ .Title }}
 {{ range .Commits -}}
 - {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}
-{{ if .JiraIssue }} {{ .JiraIssue.Description }}
-{{ end }}
 {{ end }}
 {{ end -}}
 
